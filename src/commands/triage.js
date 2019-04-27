@@ -88,7 +88,7 @@ async function triage(args) {
     {
       type: 'multiselect',
       name: 'repos',
-      message: 'Choose some repos',
+      message: 'Which repos would you like to help triage?',
       initial: keys,
       choices: keys.map(repo => ({
         name: repo,
@@ -97,7 +97,8 @@ async function triage(args) {
     {
       type: 'list',
       name: 'keywords',
-      message: 'Type comma-separated keywords you are interested in',
+      message:
+        'Are there any topics that you are interested in? Type comma-separate keywords and we can filter by them',
     },
   ]);
 
