@@ -1,0 +1,57 @@
+{
+  "name": "@carbon/triage",
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "bin": {
+    "carbon-triage": "./bin/carbon-triage.js"
+  },
+  "scripts": {
+    "ci-check": "yarn format:diff",
+    "format": "prettier --write '**/*.{js,md,scss,ts}' '!**/{build,es,lib,storybook,ts,umd}/**'",
+    "format:diff": "prettier --list-different '**/*.{js,md,scss,ts}' '!**/{build,es,lib,storybook,ts,umd}/**'",
+    "format:staged": "prettier --write"
+  },
+  "dependencies": {
+    "@octokit/rest": "^16.25.0",
+    "chalk": "^2.4.2",
+    "configstore": "^4.0.0",
+    "core-js": "^3.0.1",
+    "enquirer": "^2.3.0",
+    "ora": "^3.4.0",
+    "yargs": "^13.2.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "husky": "^2.1.0",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.17.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn format:staged",
+      "git add"
+    ],
+    "*.md": [
+      "yarn format:staged",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "jsxBracketSameLine": true,
+    "printWidth": 80,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+}
