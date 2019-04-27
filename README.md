@@ -1,6 +1,7 @@
 # @carbon/triage
 
 [![Carbon Triage is released under the Apache-2.0 license](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](./LICENSE)
+[![CircleCI](https://circleci.com/gh/carbon-design-system/carbon-triage.svg?style=shield)](https://circleci.com/gh/carbon-design-system/carbon-triage)
 [![PRs welcome!](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./.github/CONTRIBUTING.md)
 
 > Tools to help triage issues for the Carbon Design System
