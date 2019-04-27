@@ -1,10 +1,14 @@
 {
   "name": "@carbon/triage",
   "description": "Tools to help triage issues for the Carbon Design System",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "Apache-2.0",
   "repository": "https://github.com/carbon-design-system/carbon-triage",
   "bugs": "https://github.com/carbon-design-system/carbon-triage/issues",
+  "files": [
+    "bin",
+    "src"
+  ],
   "keywords": [
     "carbon",
     "carbon triage",
